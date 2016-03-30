@@ -307,6 +307,9 @@ tagsInput.directive('tagsInput', function($timeout, $document, $window, $q, tags
                     keydown: function($event) {
                         events.trigger('input-keydown', $event);
                     },
+                    click: function($event) {
+                        events.trigger('input-click', $event);
+                    },
                     focus: function() {
                         if (scope.hasFocus) {
                             return;
